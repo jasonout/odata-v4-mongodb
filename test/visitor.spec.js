@@ -57,6 +57,10 @@ describe("mongodb visitor", () => {
       expect(f).to.deep.eql({ DateTimeOffsetValue: new Date('2012-12-03T07:16:23Z') })
   })
 
+  it("expression 5.1.1.6.1: DateTimeOffsetValue eq 2012-12-03T20:16:23Z", () => {
+      expect(f).to.deep.eql({ DateTimeOffsetValue: new Date('2012-12-03T20:16:23Z') })
+  })
+
   it("expression 5.1.1.6.1: GuidValue eq 01234567-89ab-cdef-0123-456789abcdef", () => {
       expect(f).to.deep.eql({ GuidValue: '01234567-89ab-cdef-0123-456789abcdef' })
   })
